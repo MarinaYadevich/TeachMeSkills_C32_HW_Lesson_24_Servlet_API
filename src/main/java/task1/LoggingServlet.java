@@ -27,7 +27,7 @@ public class LoggingServlet extends HttpServlet {
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd, yyyy h:mm:ss a", java.util.Locale.forLanguageTag("ru"));
             String formattedDate = LocalDateTime.now().format(formatter);
-            // Запись в файл
+            // Write in file
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(logFilePath, true))) {
                 writer.write("[" + formattedDate + "] " + message + "\n"); // output in browser
             }
@@ -38,6 +38,7 @@ public class LoggingServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
+        super.init(config);
         logToFile("Name servlet: " + config.getServletName() + " --> initialized.");
     }
 
@@ -50,13 +51,13 @@ public class LoggingServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logToFile("Servlet --> serviced.");
+        logToFile("Name servlet: " + getServletName()  +" --> serviced.");
         super.service(req, resp);
     }
 
     @Override
     public void destroy() {
-        logToFile("Servlet --> destroyed.");
+        logToFile("Name servlet: " + getServletName()  +" --> destroyed.");
         super.destroy();
     }
 }

@@ -26,11 +26,13 @@ public class ReadLogServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
+        super.init(config);
         logToFile("Name servlet: " + config.getServletName()  + " --> initialized.");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        logToFile("Processing GET request: " + req.getRequestURI());
         resp.setContentType("text/html;charset=UTF-8"); // Specifies the content type that will be returned to the client in the HTTP response.
 
         try (PrintWriter out = resp.getWriter(); //Creates an object for writing an HTML response to the client.
@@ -52,20 +54,19 @@ public class ReadLogServlet extends HttpServlet {
             out.println("</pre>");
             out.println("</body>");
             out.println("</html>");
-            logToFile("GET request processed successfully");
             resp.getWriter().write("GET request processed successfully.");
         }catch (FileNotFoundException e) {
-            logToFile("Servlet --> " + e.getMessage());
+            logToFile("[ERROR] Name servlet: " + getServletName() + " --> " + e.getMessage());
             resp.sendError(404, "File Not Found");
         }catch (IOException e){
-            logToFile("Servlet --> " + e.getMessage());
+            logToFile("[ERROR] Name servlet: " + getServletName() + " --> " + e.getMessage());
             resp.sendError(500, "Internal Server Error");
         }
     }
 
     @Override
     public void destroy() {
-        logToFile("Servlet --> destroyed.");
+        logToFile("Name servlet: " + getServletName() + " --> destroyed.");
         super.destroy();
     }
 }

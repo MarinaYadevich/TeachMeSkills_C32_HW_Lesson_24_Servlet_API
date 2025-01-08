@@ -28,9 +28,8 @@ public class ParametersServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
-        resp.getWriter().write("Processing GET request.");
         logToFile("Processing GET request: " + req.getRequestURI());
 
         String appName = getServletContext().getInitParameter("appName");
@@ -48,14 +47,14 @@ public class ParametersServlet extends HttpServlet {
             out.println("<li><strong>Support email:</strong> " + supportEmail + "</li>");
             out.println("</ul>");
             out.println("</body></html>");
-        }
 
-        logToFile("GET request processed successfully");
+            resp.getWriter().write("GET request processed successfully.");
+        }
     }
 
     @Override
     public void destroy() {
-        logToFile("Servlet --> destroyed.");
+        logToFile("Name servlet: " + getServletName() + " --> destroyed.");
         super.destroy();
     }
 }

@@ -66,3 +66,46 @@
 [янв. 08, 2025 6:56:31 PM] GET request processed successfully
 [янв. 08, 2025 6:56:35 PM] Servlet --> destroyed.
 [янв. 08, 2025 6:56:35 PM] Servlet --> destroyed.
+[янв. 08, 2025 7:01:48 PM] Name servlet: task1.LoggingServlet --> initialized.
+[янв. 08, 2025 7:03:11 PM] Servlet --> destroyed.
+[янв. 08, 2025 7:07:20 PM] Name servlet: task1.LoggingServlet --> initialized.
+[янв. 08, 2025 7:08:02 PM] Servlet --> destroyed.
+[янв. 08, 2025 7:08:54 PM] Name servlet: task1.LoggingServlet --> initialized.
+[янв. 08, 2025 7:08:54 PM] Servlet: task1.LoggingServlet --> serviced.
+[янв. 08, 2025 7:08:54 PM] Processing GET request: /loggingServlet
+[янв. 08, 2025 7:09:00 PM] Servlet --> destroyed.
+[янв. 08, 2025 7:18:36 PM] Name servlet: task1.LoggingServlet --> initialized.
+[янв. 08, 2025 7:18:36 PM] Name servlet: task1.LoggingServlet --> serviced.
+[янв. 08, 2025 7:18:36 PM] Processing GET request: /loggingServlet
+[янв. 08, 2025 7:18:39 PM] Name servlet: task1.LoggingServlet --> destroyed.
+[янв. 08, 2025 7:19:44 PM] Name servlet: task2.ReadLogServlet --> initialized.
+[янв. 08, 2025 7:19:44 PM] Processing GET request: /ReadLogServlet
+[янв. 08, 2025 7:19:53 PM] Name servlet: task2.ReadLogServlet --> destroyed.
+[янв. 08, 2025 7:23:16 PM] Name servlet: task3.AboutMeServlet ---- initialized.
+[янв. 08, 2025 7:23:16 PM] Processing GET request: /AboutMeServlet
+[янв. 08, 2025 7:23:20 PM] Name servlet: task3.AboutMeServlet --> destroyed
+[янв. 08, 2025 7:25:17 PM] Name servlet: task4.ParametersServlet --> initialized.
+[янв. 08, 2025 7:25:17 PM] Processing GET request: /settings
+[янв. 08, 2025 7:25:48 PM] Name servlet: task4.ParametersServlet --> destroyed.
+[янв. 08, 2025 7:26:17 PM] Name servlet: task4.ParametersServlet --> initialized.
+[янв. 08, 2025 7:26:17 PM] Processing GET request: /settings
+[янв. 08, 2025 7:26:24 PM] Name servlet: task4.ParametersServlet --> destroyed.
+[янв. 08, 2025 7:27:10 PM] Name servlet: task4.ParametersServlet --> initialized.
+[янв. 08, 2025 7:27:10 PM] Processing GET request: /settings
+[янв. 08, 2025 7:27:15 PM] Name servlet: task4.ParametersServlet --> destroyed.
+[янв. 08, 2025 7:29:21 PM] Name servlet: task5.CountServlet --> initialized.
+[янв. 08, 2025 7:29:21 PM] Processing GET request: /count
+[янв. 08, 2025 7:29:27 PM] Processing GET request: /count
+[янв. 08, 2025 7:29:30 PM] Processing GET request: /count
+[янв. 08, 2025 7:29:33 PM] Name servlet: task5.CountServlet --> destroyed.
+[янв. 08, 2025 7:30:57 PM] Name servlet: task6.ResetServlet --> initialized.
+[янв. 08, 2025 7:30:57 PM] Processing GET request: /reset
+[янв. 08, 2025 7:30:57 PM] Name servlet: task5.CountServlet --> initialized.
+[янв. 08, 2025 7:30:57 PM] Processing GET request: /count
+[янв. 08, 2025 7:31:01 PM] Processing GET request: /count
+[янв. 08, 2025 7:31:04 PM] Processing GET request: /count
+[янв. 08, 2025 7:31:07 PM] Processing GET request: /count
+[янв. 08, 2025 7:31:08 PM] Processing GET request: /reset
+[янв. 08, 2025 7:31:08 PM] Processing GET request: /count
+[янв. 08, 2025 7:31:13 PM] Name servlet: task6.ResetServlet --> destroyed.
+[янв. 08, 2025 7:31:13 PM] Name servlet: task5.CountServlet --> destroyed.

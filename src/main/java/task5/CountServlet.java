@@ -26,9 +26,8 @@ public class CountServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
         resp.setContentType("text/html");
-        resp.getWriter().write("Processing GET request.");
         logToFile("Processing GET request: " + req.getRequestURI());
 
         HttpSession session = req.getSession();
@@ -51,12 +50,12 @@ public class CountServlet extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
 
-        logToFile("GET request processed successfully");
+        resp.getWriter().write("GET request processed successfully.");
     }
 
     @Override
     public void destroy() {
-        logToFile("Servlet --> destroyed.");
+        logToFile("Name servlet: " + getServletName() + " --> destroyed.");
         super.destroy();
     }
 }
